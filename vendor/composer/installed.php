@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'b4ec9ede69a44f0e6a8680ac93fba2693747acad',
         'name' => 'otisai/otisai-wordpress-plugin',
         'dev' => true,
     ),
@@ -41,12 +41,12 @@
             ),
         ),
         'otisai/otisai-wordpress-plugin' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'b4ec9ede69a44f0e6a8680ac93fba2693747acad',
             'dev_requirement' => false,
         ),
         'phar-io/manifest' => array(

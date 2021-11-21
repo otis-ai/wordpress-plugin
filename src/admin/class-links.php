@@ -110,7 +110,7 @@ class Links {
 	private static function get_connection_src() {
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotValidated
 		$portal_id = filter_var( wp_unslash( $_GET['otisai_connect'] ), FILTER_VALIDATE_INT );
-		return OtisAIFilters::get_otisai_base_url() . "/wordpress/onboarding/connect?portalId=$portal_id&" . self::get_query_params();
+		return OtisAIFilters::get_otisai_base_url() . "/wordpress/register/connect?portalId=$portal_id&" . self::get_query_params();
 	}
 
 	/**
@@ -134,7 +134,7 @@ class Links {
 			$wp_user    = wp_get_current_user();
 			$wp_user_id = $wp_user->ID;
 			set_transient( $otisai_onboarding, 'true' );
-			$route = '/wordpress/onboarding';
+			$route = '/wordpress/register';
 		} else {
 			$page_id = self::get_page_id();
 			$routes  = self::get_routes_mapping();

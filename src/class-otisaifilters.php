@@ -7,10 +7,10 @@ namespace OtisAI;
 class OtisAIFilters {
     /**
 	 * Return the Meetotis domain.
-	 * TODO : Change it back to the original domain
+	 * 
 	 */
 	public static function get_otisai_domain() {
-		return apply_filters( 'otisai_domain', 'a5b7-182-65-135-4.ngrok.io' );
+		return apply_filters( 'otisai_domain', 'meetotis.com' );
 	}
 
     /**

@@ -16,7 +16,6 @@ class Connection {
 		'portal_id',
 		'portal_domain',
 		'portal_name',
-		'hublet',
 	);
 
 	const CONNECT_NONCE_ARG    = 'otisai_connect';

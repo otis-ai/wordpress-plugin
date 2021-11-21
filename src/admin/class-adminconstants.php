@@ -42,7 +42,7 @@ class AdminConstants {
 		$user_info = array(
 			'firstName' => $wp_user->user_firstname,
 			'lastName'  => $wp_user->user_lastname,
-			'email'     => $wp_user->user_email,
+			'userEmail'     => $wp_user->user_email,
 			'company'   => get_bloginfo( 'name' ),
 			'show_nav'  => 'true',
 		);
@@ -75,7 +75,7 @@ class AdminConstants {
 			'theme'        => Website::get_theme(),
 			'adminUrl'     => admin_url(),
 			'websiteName'  => get_bloginfo( 'name' ),
-			'domain'       => parse_url( get_site_url(), PHP_URL_HOST ),
+			'store'        => parse_url( get_site_url(), PHP_URL_HOST ),
 			'wp_user'      => $wp_user->first_name ? $wp_user->first_name : $wp_user->user_nicename,
 			'ajaxUrl'      => Website::get_ajax_url(),
 			'nonce'        => self::get_connection_nonce(),

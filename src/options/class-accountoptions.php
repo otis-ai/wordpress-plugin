@@ -11,7 +11,6 @@ class AccountOptions extends OtisAIOptions {
 	const PORTAL_ID     = 'portalId';
 	const PORTAL_DOMAIN = 'portal_domain';
 	const ACCOUNT_NAME  = 'account_name';
-	const HUBLET        = 'hublet';
 
 	/**
 	 * Return portal id.
@@ -32,13 +31,6 @@ class AccountOptions extends OtisAIOptions {
 	 */
 	public static function get_account_name() {
 		return self::get( self::ACCOUNT_NAME );
-	}
-
-	/**
-	 * Return option containing hublet info.
-	 */
-	public static function get_hublet() {
-		return self::get( self::HUBLET );
 	}
 
 	/**
@@ -69,15 +61,6 @@ class AccountOptions extends OtisAIOptions {
 	}
 
 	/**
-	 * Return option containing hublet info.
-	 *
-	 * @param String $hublet hublet.
-	 */
-	public static function add_hublet( $hublet ) {
-		return self::add( self::HUBLET, $hublet );
-	}
-
-	/**
 	 * Delete portal id.
 	 */
 	public static function delete_portal_id() {
@@ -96,12 +79,5 @@ class AccountOptions extends OtisAIOptions {
 	 */
 	public static function delete_account_name() {
 		return self::delete( self::ACCOUNT_NAME );
-	}
-
-	/**
-	 * Delete hublet
-	 */
-	public static function delete_hublet() {
-		return self::delete( self::HUBLET );
 	}
 }
