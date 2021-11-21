@@ -1,0 +1,61 @@
+#otisai-iframe-container {
+	position: absolute;
+	top: 0;
+	height: 100% !important;
+	width: 100% !important;
+	left: 0;
+	background: white;
+  }
+
+.otis-promotion-notice {
+	padding: 20px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.otis-promotion-notice .thumbnail {
+	width: 9.3%;
+	float: left;
+}
+
+.otis-promotion-notice .thumbnail img{
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 0px 25px #bbbbbb;
+	margin-right: 20px;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.otis-promotion-notice .content {
+	float:left;
+	margin-left: 20px;
+	width: 75%;
+}
+
+.otis-promotion-notice .content h2 {
+	margin: 3px 0px 5px;
+	font-size: 17px;
+	font-weight: bold;
+	color: #555;
+	line-height: 25px;
+}
+
+.otis-promotion-notice .content p {
+	font-size: 14px;
+	text-align: justify;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.otis-promotion-notice .content a {
+	border: none;
+	box-shadow: none;
+	height: 31px;
+	line-height: 30px;
+	border-radius: 3px;
+	background: #06f;
+	text-shadow: none;
+	padding: 0px 20px;
+	text-align: center;
+}
