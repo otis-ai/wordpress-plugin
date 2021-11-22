@@ -23,7 +23,7 @@ class NoticeManager {
 		?>
 		<div class="notice is-dismissible otis-promotion-notice">
             <div class="thumbnail">
-                <img src="<?php echo esc_attr( OTISAI_PATH . '/assets/img/otis-icon.png' ); ?>" src="../wp-content/plugins/otis/assets/img/otis-icon.png" alt="Integrate Otis AI to get the best out of your store" class="">
+                <img src="<?php echo esc_attr( OTISAI_PATH . '/assets/img/otis-icon.png' ); ?>" alt="Integrate Otis AI to get the best out of your store" class="">
             </div>
             <div class="content">
                 <h2 class=""><?php _e('Integrate Otis to get the best out of this store', 'otisai'); ?></h2>

@@ -20,6 +20,7 @@ class OtisAIAdmin {
 	 */
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'redirect_after_activation' ) );
+		add_action( 'admin_head', array( $this, 'collapse_menu' ) );
 		add_action( 'admin_menu', array( $this, 'build_menu' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		register_activation_hook( OTISAI_BASE_PATH, array( $this, 'do_activate_action' ) );
@@ -65,6 +66,21 @@ class OtisAIAdmin {
 			exit;
 		}		
 	}
+
+	/**
+	 * Collapse side bar menu after redirect
+	 */
+	public function collapse_menu() {
+		$current_screen = get_current_screen();
+		
+		if ( strpos($current_screen->id, 'otisai') !== false ) {
+			if ( 'f' != get_user_setting( 'mfold' ) ) {
+				set_user_setting( 'mfold', 'f' );
+			}
+		} else {
+			set_user_setting( 'mfold', 'o');
+		}
+    }
 
 	/**
 	 * Adds scripts for the admin section.
