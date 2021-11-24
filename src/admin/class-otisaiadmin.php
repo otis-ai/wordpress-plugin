@@ -8,6 +8,7 @@ use OtisAI\admin\AdminFilters;
 use OtisAI\admin\MenuConstants;
 use OtisAI\admin\NoticeManager;
 use OtisAI\utils\Versions;
+use OtisAI\admin\Links;
 
 /**
  * Class responsible for initializing the admin side of the plugin.
@@ -128,9 +129,8 @@ class OtisAIAdmin {
 				</div>
 			<?php
 		} else {
-			?>
-				<div id="otisai-iframe-container"></div>
-			<?php
+			$external_link = Links::get_iframe_src();
+			wp_redirect( $external_link , 302);
 		}
 	}
 }

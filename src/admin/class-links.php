@@ -130,33 +130,10 @@ class Links {
 		$inframe_search_string = self::get_iframe_search_string();
 		$browser_search_string = $browser_search_string . $inframe_search_string;
 
-		if ( empty( AccountOptions::get_portal_id() ) ) {
-			$wp_user    = wp_get_current_user();
-			$wp_user_id = $wp_user->ID;
-			set_transient( $otisai_onboarding, 'true' );
-			$route = '/wordpress/register';
-		} else {
-			$page_id = self::get_page_id();
-			$routes  = self::get_routes_mapping();
-
-			$route = IframeRoutes::get_oauth_path();
-			if ( empty( $route ) && isset( $routes[ $page_id ] ) ) {
-				$route = $routes[ $page_id ];
-
-				if ( \is_array( $route ) && isset( $sub_routes_array[0] ) ) {
-					$first_sub_route = $sub_routes_array[0];
-
-					if ( isset( $route[ $first_sub_route ] ) ) {
-						$route = $route[ $first_sub_route ];
-						array_shift( $sub_routes_array );
-					}
-				}
-
-				if ( \is_array( $route ) ) {
-					$route = $route[''];
-				}
-			}
-		}
+		$wp_user    = wp_get_current_user();
+		$wp_user_id = $wp_user->ID;
+		set_transient( $otisai_onboarding, 'true' );
+		$route = '/wordpress/register';
 
 		$sub_routes = join( '/', $sub_routes_array );
 		$sub_routes = empty( $sub_routes ) ? $sub_routes : "/$sub_routes";

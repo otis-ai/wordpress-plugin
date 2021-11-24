@@ -81,7 +81,7 @@ class ComposerStaticInit190d95a23fe1ca94c525b6fa1939d844
         'OtisAI\\admin\\Links' => __DIR__ . '/../..' . '/src/admin/class-links.php',
         'OtisAI\\admin\\MenuConstants' => __DIR__ . '/../..' . '/src/admin/class-menuconstants.php',
         'OtisAI\\admin\\NoticeManager' => __DIR__ . '/../..' . '/src/admin/class-noticemanager.php',
-        'OtisAI\\admin\\OtisAIAdmin' => __DIR__ . '/../..' . '/src/admin/class-otisaaidmin.php',
+        'OtisAI\\admin\\OtisAIAdmin' => __DIR__ . '/../..' . '/src/admin/class-otisaiadmin.php',
         'OtisAI\\admin\\Routing' => __DIR__ . '/../..' . '/src/admin/class-routing.php',
         'OtisAI\\options\\AccountOptions' => __DIR__ . '/../..' . '/src/options/class-accountoptions.php',
         'OtisAI\\options\\OtisAIOptions' => __DIR__ . '/../..' . '/src/options/class-otisaioptions.php',

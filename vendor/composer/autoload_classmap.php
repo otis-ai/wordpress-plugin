@@ -17,7 +17,7 @@ return array(
     'OtisAI\\admin\\Links' => $baseDir . '/src/admin/class-links.php',
     'OtisAI\\admin\\MenuConstants' => $baseDir . '/src/admin/class-menuconstants.php',
     'OtisAI\\admin\\NoticeManager' => $baseDir . '/src/admin/class-noticemanager.php',
-    'OtisAI\\admin\\OtisAIAdmin' => $baseDir . '/src/admin/class-otisaaidmin.php',
+    'OtisAI\\admin\\OtisAIAdmin' => $baseDir . '/src/admin/class-otisaiadmin.php',
     'OtisAI\\admin\\Routing' => $baseDir . '/src/admin/class-routing.php',
     'OtisAI\\options\\AccountOptions' => $baseDir . '/src/options/class-accountoptions.php',
     'OtisAI\\options\\OtisAIOptions' => $baseDir . '/src/options/class-otisaioptions.php',
