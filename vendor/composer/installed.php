@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '8c654b98f1db008bccabd7f43226e37a4a3da5f1',
+        'reference' => '1d2cb0879b0d6cf7720cc25abaa7687010b7e9e2',
         'name' => 'otisai/otisai-wordpress-plugin',
         'dev' => true,
     ),
@@ -46,7 +46,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '8c654b98f1db008bccabd7f43226e37a4a3da5f1',
+            'reference' => '1d2cb0879b0d6cf7720cc25abaa7687010b7e9e2',
             'dev_requirement' => false,
         ),
         'phar-io/manifest' => array(

@@ -22,16 +22,16 @@ class NoticeManager {
 	private function otisai_render_promotion_banner() {
 		?>
 		<div class="notice is-dismissible otis-promotion-notice">
-            <div class="thumbnail">
-                <img src="<?php echo esc_attr( OTISAI_PATH . '/assets/img/otis-icon.png' ); ?>" alt="Integrate Otis AI to get the best out of your store" class="">
-            </div>
-            <div class="content">
-                <h2 class=""><?php _e('Integrate Otis to get the best out of this store', 'otisai'); ?></h2>
-                <p><?php _e('Use digital marketing to stand above the crowd. Our in house features are designed to boost your store audience.', 'otisai'); ?></p>
-                <a href="https://meetotis.com/#howitworks" class="button button-primary promo-btn" target="_blank"><?php _e('Learn More', 'otisai'); ?> →</a>
-            </div>
-            <div class="clear"></div>
-        </div>
+			<div class="thumbnail">
+				<img src="<?php echo esc_attr( OTISAI_PATH . '/assets/img/otis-icon.png' ); ?>" alt="Integrate Otis AI to get the best out of your store" class="">
+			</div>
+			<div class="content">
+				<h2 class=""><?php esc_html_e( 'Integrate Otis to get the best out of this store', 'otisai' ); ?></h2>
+				<p><?php esc_html_e( 'Use digital marketing to stand above the crowd. Our in house features are designed to boost your store audience.', 'otisai' ); ?></p>
+				<a href="https://meetotis.com/#howitworks" class="button button-primary promo-btn" target="_blank"><?php esc_html_e( 'Learn More', 'otisai' ); ?> →</a>
+			</div>
+			<div class="clear"></div>
+		</div>
 		<?php
 	}
 

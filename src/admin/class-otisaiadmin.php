@@ -22,6 +22,7 @@ class OtisAIAdmin {
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'redirect_after_activation' ) );
 		add_action( 'admin_head', array( $this, 'collapse_menu' ) );
+		add_filter( 'allowed_redirect_hosts', array( $this, 'otisai_allowed_redirect_hosts' ) );
 		add_action( 'admin_menu', array( $this, 'build_menu' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		register_activation_hook( OTISAI_BASE_PATH, array( $this, 'do_activate_action' ) );
@@ -34,6 +35,16 @@ class OtisAIAdmin {
 
 		new NoticeManager();
 		new AdminFilters();
+	}
+
+	/**
+	 * Adding otis domain to the allowed hosts.
+	 */
+	public function otisai_allowed_redirect_hosts( $hosts ) {
+		$my_hosts = array(
+			'meetotis.com',
+		);
+		return array_merge( $hosts, $my_hosts );
 	}
 
 	/**
@@ -65,7 +76,7 @@ class OtisAIAdmin {
 			delete_transient( self::REDIRECT_TRANSIENT );
 			wp_safe_redirect( admin_url( 'admin.php?page=otisai' ) );
 			exit;
-		}		
+		}
 	}
 
 	/**
@@ -73,15 +84,15 @@ class OtisAIAdmin {
 	 */
 	public function collapse_menu() {
 		$current_screen = get_current_screen();
-		
-		if ( strpos($current_screen->id, 'otisai') !== false ) {
-			if ( 'f' != get_user_setting( 'mfold' ) ) {
+
+		if ( strpos( $current_screen->id, 'otisai' ) !== false ) {
+			if ( 'f' !== get_user_setting( 'mfold' ) ) {
 				set_user_setting( 'mfold', 'f' );
 			}
 		} else {
-			set_user_setting( 'mfold', 'o');
+			set_user_setting( 'mfold', 'o' );
 		}
-    }
+	}
 
 	/**
 	 * Adds scripts for the admin section.
@@ -130,7 +141,8 @@ class OtisAIAdmin {
 			<?php
 		} else {
 			$external_link = Links::get_iframe_src();
-			wp_redirect( $external_link , 302);
+			wp_safe_redirect( $external_link, 302 );
+			exit;
 		}
 	}
 }

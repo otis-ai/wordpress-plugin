@@ -42,7 +42,7 @@ class AdminConstants {
 		$user_info = array(
 			'firstName' => $wp_user->user_firstname,
 			'lastName'  => $wp_user->user_lastname,
-			'userEmail'     => $wp_user->user_email,
+			'userEmail' => $wp_user->user_email,
 			'company'   => get_bloginfo( 'name' ),
 			'show_nav'  => 'true',
 		);
@@ -54,11 +54,11 @@ class AdminConstants {
 	 * Return an array of properties to be included in the signup search string
 	 */
 	public static function get_signup_query_params_array() {
-		$signup_params                         = array();
-		$signup_params['otisaiPluginVersion']  = constant( 'OTISAI_PLUGIN_VERSION' );
-		$user_prefill_params                   = self::get_signup_prefill_params_array();
-		$signup_params                         = array_merge( $signup_params, $user_prefill_params );
-		$utm_params                            = self::get_utm_query_params_array();
+		$signup_params                        = array();
+		$signup_params['otisaiPluginVersion'] = constant( 'OTISAI_PLUGIN_VERSION' );
+		$user_prefill_params                  = self::get_signup_prefill_params_array();
+		$signup_params                        = array_merge( $signup_params, $user_prefill_params );
+		$utm_params                           = self::get_utm_query_params_array();
 		return array_merge( $signup_params, $utm_params );
 	}
 
@@ -66,7 +66,7 @@ class AdminConstants {
 	 * Return query params array for the iframe.
 	 */
 	public static function get_otis_query_params_array() {
-		$wp_user        = wp_get_current_user();
+		$wp_user     = wp_get_current_user();
 		$otis_config = array(
 			'l'            => get_locale(),
 			'php'          => Versions::get_php_version(),
@@ -94,8 +94,8 @@ class AdminConstants {
 		if ( ! Connection::is_connected() ) {
 			$otis_config['oauth'] = true;
 
-			$signup_params  = self::get_signup_query_params_array();
-			$otis_config = array_merge( $otis_config, $signup_params );
+			$signup_params = self::get_signup_query_params_array();
+			$otis_config   = array_merge( $otis_config, $signup_params );
 		}
 
 		return $otis_config;

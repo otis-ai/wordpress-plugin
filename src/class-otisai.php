@@ -25,7 +25,6 @@ class OtisAI {
 
 	/**
 	 * Determines if WooCommerce is active.
-	 * 
 	 */
 	public static function is_woocommerce_active() {
 
@@ -35,12 +34,11 @@ class OtisAI {
 			$active_plugins = array_merge( $active_plugins, get_site_option( 'active_sitewide_plugins', array() ) );
 		}
 
-		return in_array( 'woocommerce/woocommerce.php', $active_plugins, false ) || array_key_exists( 'woocommerce/woocommerce.php', $active_plugins );
+		return in_array( 'woocommerce/woocommerce.php', $active_plugins, true ) || array_key_exists( 'woocommerce/woocommerce.php', $active_plugins );
 	}
 
 	/**
 	 * Deactivates the plugin.
-	 *
 	 */
 	protected function deactivate_plugin() {
 
@@ -52,15 +50,15 @@ class OtisAI {
 	}
 
 	/**
-	 * 
+	 * Error message if woocommerce is not active.
 	 */
-	public function otisai_plugin_error_notice() { 
+	public function otisai_plugin_error_notice() {
 		?>
 		<div class="error notice is-dismissible">
 			<p>
 				<?php esc_html_e( 'WooCommerce is not activated. Please activate WooCommerce first to use Otis using WooCommerce', 'otisai' ); ?>
 			</p>
 		</div>
-    	<?php 
+		<?php
 	}
 }

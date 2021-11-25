@@ -20,12 +20,11 @@ class Links {
 	 * - url is either a string or another map <route, string_url>, both strings
 	 */
 	public static function get_routes_mapping() {
-		$portal_id      = AccountOptions::get_portal_id();
+		$portal_id = AccountOptions::get_portal_id();
 	}
 
 	/**
 	 * Get page name from the current page id.
-     * 
 	 */
 	private static function get_page_id() {
 		$screen_id = get_current_screen()->id;
@@ -36,8 +35,8 @@ class Links {
 	 * Get the parsed `otisai_route` from the query string.
 	 */
 	private static function get_iframe_route() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-		$iframe_route = isset( $_GET['otisai_route'] ) ? wp_unslash( $_GET['otisai_route'] ) : array();
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$iframe_route = isset( $_GET['otisai_route'] ) ? esc_url_raw( wp_unslash( $_GET['otisai_route'] ) ) : array();
 		return is_array( $iframe_route ) ? $iframe_route : array();
 	}
 
@@ -108,14 +107,13 @@ class Links {
 	 * Returns the url for the connection page
 	 */
 	private static function get_connection_src() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotValidated
-		$portal_id = filter_var( wp_unslash( $_GET['otisai_connect'] ), FILTER_VALIDATE_INT );
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$portal_id = isset( $_GET['otisai_connect'] ) ? filter_var( esc_url_raw( wp_unslash( $_GET['otisai_connect'] ) ), FILTER_VALIDATE_INT ) : '';
 		return OtisAIFilters::get_otisai_base_url() . "/wordpress/register/connect?portalId=$portal_id&" . self::get_query_params();
 	}
 
 	/**
 	 * Returns the right iframe src.
-	 *
 	 */
 	public static function get_iframe_src() {
 		$otisai_onboarding     = 'otisai_onboarding';

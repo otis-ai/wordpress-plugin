@@ -15,7 +15,7 @@ namespace OtisAI;
  * Tested up to: 5.8
  * WC requires at least: 3.5
  * WC tested up to: 5.9
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -73,5 +73,3 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 use \OtisAI\OtisAI;
 
 $otisai = new OtisAI();
-
-?>

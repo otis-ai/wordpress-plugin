@@ -13,7 +13,6 @@ return array(
     'OtisAI\\admin\\AdminConstants' => $baseDir . '/src/admin/class-adminconstants.php',
     'OtisAI\\admin\\AdminFilters' => $baseDir . '/src/admin/class-adminfilters.php',
     'OtisAI\\admin\\Connection' => $baseDir . '/src/admin/class-connection.php',
-    'OtisAI\\admin\\IframeRoutes' => $baseDir . '/src/admin/class-iframeroutes.php',
     'OtisAI\\admin\\Links' => $baseDir . '/src/admin/class-links.php',
     'OtisAI\\admin\\MenuConstants' => $baseDir . '/src/admin/class-menuconstants.php',
     'OtisAI\\admin\\NoticeManager' => $baseDir . '/src/admin/class-noticemanager.php',

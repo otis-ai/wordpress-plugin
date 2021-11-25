@@ -8,9 +8,9 @@ use OtisAI\admin\AdminConstants;
  * Class responsible of managing all the plugin assets.
  */
 class AssetsManager {
-	const ADMIN_CSS     = 'otisai-css';
-	const BRIDGE_CSS    = 'otisai-bridge-css';
-	
+	const ADMIN_CSS  = 'otisai-css';
+	const BRIDGE_CSS = 'otisai-bridge-css';
+
 	/**
 	 * Register and localize all assets.
 	 */
